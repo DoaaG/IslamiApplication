@@ -12,17 +12,21 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".home.quran.SuarDetailsActivity"
+            android:name=".home.hadeth.HadethDetailsActivity"
             android:theme="@style/noActionBar"
             android:exported="false" />
+        <activity
+            android:name=".home.quran.SuarDetailsActivity"
+            android:exported="false"
+            android:theme="@style/noActionBar" />
         <activity
             android:name=".home.HomeActivity"
-            android:theme="@style/noActionBar"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/noActionBar" />
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/noActionBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/noActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
