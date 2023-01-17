@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.sebha.SebhaFragment">
+<!--    <ImageView-->
+<!--        android:id="@+id/sebha_img"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:src="@drawable/sebha_img"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHeight_percent=".5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <ImageView
+        android:id="@+id/sebha_head"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:src="@drawable/head_of_sebha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/sebha_body"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:src="@drawable/body_of_sebha"
+        android:layout_marginTop="-26dp"
+        app:layout_constraintEnd_toEndOf="@id/sebha_head"
+        app:layout_constraintStart_toStartOf="@id/sebha_head"
+        app:layout_constraintTop_toBottomOf="@id/sebha_head"/>
+
+        <TextView
+            android:id="@+id/tasbeh_number_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="عدد التسبيحات"
+            android:layout_margin="8dp"
+            android:textColor="@color/black"
+            android:textSize="29sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sebha_body"/>
+
+        <TextView
+            android:id="@+id/tasbeh_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tasbeh_numbertv_roundedcorners"
+            android:backgroundTint="@color/ligth_beige"
+            style="@style/tasbeh_number_style"
+            app:layout_constraintTop_toBottomOf="@id/tasbeh_number_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <Button
+            android:id="@+id/tasbeh_button"
+            style="@style/asbeh_button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="سبحان الله"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tasbeh_number" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
