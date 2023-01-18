@@ -25,11 +25,12 @@ class HadethFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Adapeter = HadethAdapter(" الحديث رقم ")
+        Adapeter = HadethAdapter(50)
 
         Adapeter.onHadethClickListener = object : OnHadethClickListener {
             override fun onitemClick(position: Int) {
                 val intent = Intent(activity, HadethDetailsActivity::class.java)
+                intent.putExtra(Constants.Index, position)
                 activity?.startActivity(intent)
             }
 
