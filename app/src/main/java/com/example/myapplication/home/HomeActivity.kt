@@ -28,9 +28,9 @@ class HomeActivity : AppCompatActivity() {
                 showFragment(QuranFragment())
 
             } else if (it.itemId == R.id.nav_hadeth) {
-//                showFragment(HadethFragment())
-                val intent = Intent(this, HadethDetailsActivity::class.java)
-                startActivity(intent)
+                showFragment(HadethFragment())
+//                val intent = Intent(this, HadethDetailsActivity::class.java)
+//                startActivity(intent)
 
             } else if (it.itemId == R.id.nav_radio) {
                 showFragment(RadioFragment())

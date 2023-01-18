@@ -1,12 +1,11 @@
 package com.example.myapplication.home.hadeth
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.myapplication.databinding.HadethItemBinding
 
-class HadethDetailsAdapter(var hadethlist: List<String>): Adapter<HadethDetailsAdapter.ViewHolder>() {
+class HadethDetailsAdapter(var hadethlist: String): Adapter<HadethDetailsAdapter.ViewHolder>() {
     inner class ViewHolder(val binding: HadethItemBinding) :
         androidx.recyclerview.widget.RecyclerView.ViewHolder(binding.root)
 
@@ -16,12 +15,11 @@ class HadethDetailsAdapter(var hadethlist: List<String>): Adapter<HadethDetailsA
     }
 
     override fun getItemCount(): Int {
-    return hadethlist.size
+    return 1
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-     val item = hadethlist[position]
-        holder.binding.hadethTvForRecycler.text = item
+        holder.binding.hadethTvForRecycler.text = hadethlist
     }
 
 }
