@@ -8,12 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.myapplication.Constants
 import com.example.myapplication.databinding.FragmentHadethBinding
-import com.example.myapplication.home.quran.SuarDetailsActivity
-import java.io.File
 
 class HadethFragment : Fragment() {
     lateinit var Hadethbinding : FragmentHadethBinding
     lateinit var Adapeter : HadethAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,18 +24,31 @@ class HadethFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Adapeter = HadethAdapter(50)
+        val adapterlist = readfile()
+        Adapeter = HadethAdapter(adapterlist)
+        onClick()
+        Hadethbinding.hadethRecycler.adapter = Adapeter
+    }
 
+    private fun onClick() {
         Adapeter.onHadethClickListener = object : OnHadethClickListener {
-            override fun onitemClick(position: Int) {
+            override fun onitemClick(position: Int, listitem:List <String>) {
                 val intent = Intent(activity, HadethDetailsActivity::class.java)
                 intent.putExtra(Constants.Index, position)
+                intent.putExtra(Constants.Hadeth_Details,listitem[position])
                 activity?.startActivity(intent)
             }
 
         }
-        Hadethbinding.hadethRecycler.adapter = Adapeter
+    }
 
+
+    private fun readfile(): List<String> {
+        val fileName = "ahadeth .txt"
+        val fileContent = activity?.assets?.open(fileName)?.bufferedReader().use {
+            it!!.readText()
+        }
+        return fileContent.split("#") as ArrayList<String>
     }
 
 
