@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.myapplication.databinding.HadethItemBinding
 
-class HadethAdapter(var hadethsize: Int) :
+class HadethAdapter(var hadethlist: List<String>) :
     androidx.recyclerview.widget.RecyclerView.Adapter<HadethAdapter.hadethViewHolder>() {
     inner class hadethViewHolder(val binding: HadethItemBinding) :
         androidx.recyclerview.widget.RecyclerView.ViewHolder(binding.root)
@@ -15,14 +15,14 @@ class HadethAdapter(var hadethsize: Int) :
     }
 
     override fun getItemCount(): Int {
-        return hadethsize
+        return hadethlist.size
     }
 
     var onHadethClickListener: OnHadethClickListener? = null
     override fun onBindViewHolder(holder: hadethViewHolder, position: Int) {
         holder.binding.hadethTvForRecycler.text = (" الحديث رقم ")+ "${position + 1}"
         holder.binding.hadethTvForRecycler.setOnClickListener {
-            onHadethClickListener!!.onitemClick(position)
+            onHadethClickListener!!.onitemClick(position,hadethlist)
         }
 
     }

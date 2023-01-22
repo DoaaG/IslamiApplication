@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.myapplication.databinding.HadethItemBinding
 
-class HadethDetailsAdapter(var hadethlist: String): Adapter<HadethDetailsAdapter.ViewHolder>() {
+class HadethDetailsAdapter(var hadethlist: String?): Adapter<HadethDetailsAdapter.ViewHolder>() {
     inner class ViewHolder(val binding: HadethItemBinding) :
         androidx.recyclerview.widget.RecyclerView.ViewHolder(binding.root)
 
