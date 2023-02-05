@@ -23,6 +23,7 @@
 
                 <ImageView
                     android:id="@+id/back_btn"
+                    style="@style/backArrowColor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -32,10 +33,10 @@
 
                 <TextView
                     android:id="@+id/sura_nametv_of_appbar"
+                    style="@style/text_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="الاحاديث"
-                    android:textColor="@color/black"
                     android:textSize="28sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
