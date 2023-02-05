@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".home.quran.QuranFragment">
 
     <ImageView
@@ -19,19 +19,19 @@
 
     <View
         android:id="@+id/divider1"
+        style="@style/dividers_color"
         android:layout_width="match_parent"
         android:layout_height="4dp"
-        android:background="@color/ligth_beige"
         app:layout_constraintBottom_toTopOf="@id/suar_recyclerview"
         app:layout_constraintTop_toBottomOf="@id/moshaf_img" />
 
     <TextView
         android:id="@+id/suar_names"
+        style="@style/text_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="اسم السورة"
-        android:textColor="@color/black"
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@id/suar_recyclerview"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,19 +40,19 @@
 
     <View
         android:id="@+id/divider2"
+        style="@style/dividers_color"
         android:layout_width="match_parent"
         android:layout_height="4dp"
-        android:background="@color/ligth_beige"
         app:layout_constraintBottom_toTopOf="@id/suar_recyclerview"
         app:layout_constraintTop_toBottomOf="@id/suar_names" />
 
     <TextView
         android:id="@+id/ayat_numbers"
+        style="@style/text_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="عدد الآيات"
-        android:textColor="@color/black"
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@+id/suar_recyclerview"
         app:layout_constraintEnd_toStartOf="@+id/suar_names"
@@ -64,14 +64,15 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/divider1"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1">
+
         <View
             android:id="@+id/divider3"
+            style="@style/dividers_color"
             android:layout_width="4dp"
             android:layout_height="match_parent"
-            android:background="@color/ligth_beige"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
 
     </LinearLayout>
 

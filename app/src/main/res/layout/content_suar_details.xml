@@ -9,6 +9,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview_for_suar_details_recycler"
+        style="@style/cardBackground"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:cardCornerRadius="18dp"
@@ -27,11 +28,11 @@
 
             <TextView
                 android:id="@+id/sura_nametv_of_appbar"
+                style="@style/contents_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="suraname"
-                android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -40,13 +41,13 @@
 
             <View
                 android:id="@+id/divider"
+                style="@style/dividers_color"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_margin="9dp"
-                android:background="@color/ligth_beige"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/sura_nametv_of_appbar"/>
+                app:layout_constraintTop_toBottomOf="@id/sura_nametv_of_appbar" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/suar_details_recycler"
@@ -54,9 +55,9 @@
                 android:layout_height="0dp"
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/suar_details_item"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                tools:listitem="@layout/suar_details_item" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
